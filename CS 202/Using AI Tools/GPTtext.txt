@@ -1,0 +1,91 @@
+Part One
+1a. Write a basic Java function that calculates the nth Fibonacci number.
+
+1b. Modify the fibonacci function to not be recursive.
+
+2a. Write a java function, not a class, that calculates the factorial of a number.
+
+2b. Modify the function to make it better suited to handle large numbers.
+
+2c. Modify the function to only calculate prime factorials.
+
+Part Two
+1. This calculateCircleArea function calculates the area of a circle using a complex method.
+Simplify it to the simplest possible code.
+
+   public static double calculateCircleArea(double r) {
+           double a = 0;
+           for (int i = 0; i < 1000000; i++) {
+               a += (Math.pow(r, 2) * Math.pow(Math.sin(Math.PI / 1000000 * i), 2)) / (1 + i);
+           }
+           return a * Math.PI / 1000000;
+       }
+
+2. Thank you. The following method has a bug in it. Can you find it for me?
+
+    public static double geometricSeriesSum(double firstTerm, double ratio, int numTerms) {
+           if (ratio == 1) {
+               return firstTerm * numTerms;
+           }
+           return firstTerm * (1 - Math.pow(ratio, numTerms));
+       }
+
+3. The harmonicNumber function finds the nth harmonic number. This function works correctly,
+but is very slow. Can you optimize it?
+
+    public static double harmonicNumber(int n) {
+           double sum = 0;
+           for (int i = 1; i <= n; i++) {
+               double term = 1;
+               for (int j = 1; j <= i; j++) {
+                   term *= 1.0 / j;
+               }
+               sum += term;
+           }
+           return sum;
+       }
+
+I said that this function works correctly. I only want you to optimize it. Try again, please.
+
+
+Part Three
+1. Can you help me understand the following function?
+
+   public static int function1(int n) {
+           int a = 0;
+           int b = 2;
+           while (a < n) {
+               boolean bool = true;
+               for (int i = 2; i <= Math.sqrt(b); i++) {
+                   if (b % i == 0) {
+                       bool = false;
+                       break;
+                   }
+               }
+               if (bool) {
+                   a++;
+               }
+               b++;
+           }
+           return b - 1;
+       }
+
+2. Can you explain the following function for me?
+
+   public static double function2(int n) {
+           double a = 0;
+           for (int i = 0; i < n; i++) {
+               a += Math.pow(-1, i) / (2 * i + 1);
+           }
+           return 4 * a;
+       }
+
+3. Can you help me understand the following function?
+
+   public static double function3(double a, double b, double c) {
+           double s = (a + b + c) / 2;
+           return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+       }
+
+
+

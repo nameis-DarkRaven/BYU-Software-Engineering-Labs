@@ -1,0 +1,28 @@
+Equipment.java
+- line 11: otherEquipment is not used; please remove it, write a note for future implementations, or finish implementing it now
+- line 3: if otherEquipment will not be used, it should be deleted. Deleting otherEquipment will cause the java.util.List import to become unused and thus should also be deleted.
+- lines 13-17: please add a line to initialize weapon
+- line 44: Is weaponDamage returned correctly? I find it a bit strange that we are returning damage + 9000 for every weapon. If this is correct, please add 9000 when the weaponDamage is first initialized and leave some documentation explaining the reasoning behind it
+- lines 50-52: consider removing the unnecessary white space (newlines)
+
+Treasure.java
+- line 3: if otherTreasure will not be used, it should be deleted. Deleting otherTreasure will cause the java.util.List import to become unused and thus should also be deleted.
+- line 6: consider changing gp to goldPieces
+- line 7: otherTreasure is not used; please remove it, write a note for future implementations, or finish implementing it now
+- line 10: gold pieces should be returned as is so players are not confused as to how many they have, or documentation should clarify the reasoning behind this; an in-line comment may suffice
+- line 13: goldPeces should be spelled goldPieces
+- line 14: is adding 10000 gold every time the amount of gold is changed intended behavior? if so, please add documentation for clarity
+
+CharacterClass.java
+- line 5: consider changing spellDamageMod to spellDamageModifer to be consistent with weaponDamageModifier
+- line 6: I believe the naming here is fine, but would you add some comment clarification for what this variable does? I think it represents the number that was rolled with dice, but I am unsure
+- line 10: consider changing wdm to weaponDamageModifier for better consistency and readability
+- lines 10-14: consider changing the order of the parameters and following initializations to match the order the variables were prototyped
+- line 17: please rename getWDM to getWeaponDamageModifier for better readability and consistency with names of the other getters
+- line 29: please rename getCN to getClassName for better readability and consistency
+- lines 1-33: do we need any setters for the variables in this class?
+
+Race.java
+- line 7: Race seems to be an odd name for a class that only deals with ability scores and has nothing to do with races; consider renaming it to something like AbilityScores
+- line 8: what is the role of the name variable? Consider moving it and it's getter on lines 35-37 to another class that deals with characters or npcs. 
+- line 32: The bound of nextInt is exclusive, meaning the highest number that will be generated is 17 rather than 18; please change the bound to 10 so the max generated number is 18 to match the documentation
